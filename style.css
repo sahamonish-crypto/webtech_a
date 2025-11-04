@@ -1,0 +1,131 @@
+/* Set a basic font and background for the whole page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Create a container for the form */
+#form-container {
+    width: 650px;
+    margin: 20px auto; /* 'auto' on left/right centers the box */
+    padding: 20px;
+    background-color: #d1d1d1;
+    border: 1px solid #cccccc;
+    border-radius: 8px; /* Added rounded corners */
+}
+
+/* Style for the red asterisk * */
+.required {
+    color: rgb(255, 4, 0);
+    font-weight: bold;
+}
+
+/* Style for the main section titles (like "Donor Information") */
+.section-title {
+    color: #cc0000; /* Red color */
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Use a table for the main form layout to keep it simple */
+.form-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between table cells */
+}
+
+.form-table td {
+    padding: 6px;
+}
+
+/* Style for the labels in the table (e.g., "First Name:") */
+.form-table .label-cell {
+    width: 160px; /* Set a fixed width for labels */
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+/* Basic styling for text inputs, dropdowns, and textareas */
+input[type="text"],
+select,
+textarea {
+    width: 250px;
+    border: 1px solid #3708f4;
+    padding: 4px;
+    border-radius: 4px; /* Added rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Make some inputs smaller */
+.input-small {
+    width: 60px;
+}
+
+/* Make some inputs wider */
+.input-wide {
+    width: 400px;
+}
+
+/* Style for notes below labels */
+.note {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+/* Add spacing for groups of form elements */
+.form-group {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Style for the buttons */
+.button-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 6px 20px;
+    font-size: 13px;
+    border: 1px solid #999999;
+    background-color: #eeeeee;
+    border-radius: 4px; /* Added rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #dddddd;
+}
+
+input[type="reset"]:hover {
+    background-color: #f7c5c5;
+}
+
+
+/* Style for the text at the very bottom */
+.footer-note {
+    font-size: 11px;
+    color: #666666;
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+/* --- THIS IS THE NEW CODE YOU ASKED FOR ---
+Adds a blue border and shadow when a field is selected (in focus)
+*/
+/* I also removed the duplicate input[type="text"]:focus selector */
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* A nice blue color */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6); /* A soft blue shadow */
+    outline: none; /* Remove the default browser outline */
+}
