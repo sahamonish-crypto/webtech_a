@@ -13,7 +13,7 @@
     <div id="form-container">
         
         
-        <form action="#" method="post">
+        <form action="#" method="post" id="donation-form" onsubmit="return validateForm()"></form>
             
             
             <p><span class="required">*</span> - Denotes Required Information</p>
@@ -79,6 +79,7 @@
                         <select id="state" name="state">
                             <option value="">Select a State</option>
                             <!-- Add other states here if needed -->
+                            <option value="Dhaka">Dhaka</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -106,6 +107,7 @@
                         <select id="country" name="country">
                             <option value="">Select a Country</option>
                             <!-- Add other countries here if needed -->
+                              <option value="BGD">Bangladesh</option>
                             <option value="USA">United States</option>
                             <option value="CAN">Canada</option>
                             <option value="MEX">Mexico</option>
@@ -163,12 +165,12 @@
                     <label for="recurring">I am interested in giving on a regular basis.</label>
                 </div>
                 <div>
-                    <label for="recurring_amount">Monthly Credit Card $:</label>
-                    <input type="text" id="recurring_amount" name="recurring_amount" class="input-small">
-                    <label for="recurring_months">For</label>
-                    <input type="text" id="recurring_months" name="recurring_months" class="input-small">
-                    Months
-                </div>
+                    <label for="recurring_amount">Monthly Credit Card $:</label>
+                    <input type="text" id="recurring_amount" name="recurring_amount" class="input-small">
+                    <label for="recurring_months">For</label>
+                    <input type="text" id="recurring_months" name="recurring_months" class="input-small">
+                    Months
+                </div>
             </div>
 
             <!-- 
@@ -317,15 +319,14 @@
             <!-- 
                 BUTTONS AND FOOTER 
             -->
-            <div class="button-container">
-                <button style = "font-weight: bold;">
-                    reset
-                </button>
-                <button>
-                    continue
-                </button>
-            
-            </div>
+                <div class="button-container">
+                   <button type="reset" id="reset_button">
+        reset
+                </button>
+                   <button type="submit">
+                            submit
+                      </button>
+                  </div>
 
             <!-- Fixed typo here: was 'classs' -->
             <div class="footer-note">
@@ -335,7 +336,7 @@
 
         </form>
     </div>
-
+         <script src="donation_form_javascript.js"></script>
 </body>
 </html>
 
